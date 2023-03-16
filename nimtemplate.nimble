@@ -25,9 +25,9 @@ task test, "run tests":
           "balls.cmd"
     else: "balls"
   exec balls & " --backend:c --mm:orc --mm:arc --mm:refc --define:debug --define:release --define:danger"
-  
-task prepare, "setup template":
-  if paramCount() != 10: quit("Usage: nimble template NEWNAME GITHUBUSERNAME")
+
+task prepare, "prepare template":
+  if paramCount() != 10: quit("Usage: nimble template PROJECTNAME GITHUBUSERNAME")
   if findExe("sed") == "" or findExe("rename") == "":
     quit("sed and rename are not available.\nYou will need to find another way to replace nimtemplate with " & paramStr(9) & " and Gruruya with " & paramStr(10) &
       "\nLook at the prepare task in nimtemplate.nimble if you want to see what files need changed.")
