@@ -16,7 +16,7 @@ _Click [here](../../../nimtemplate/generate) to begin_
 
 Usage
 ---
-Pick a new project name, do note that the module's name has to be a valid Nim identifier, for instance it can't have a `-` in it.  
+Pick a new project name, note that the resulting module's name has to be a valid Nim identifier, for instance it can't have a `-` in it.  
 ```sh
 nimble prepare PROJNAME GITHUBUSER
 ```
