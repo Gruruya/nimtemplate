@@ -1,25 +1,17 @@
-name: build
+name: documentation
 
 on:
   push:
-    paths-ignore: ['*.md', '.github/**']
-    paths: ['.github/workflows/build.yml']
+    paths: 'src/**'
     branches: master
-  pull_request:
-    paths-ignore: ['*.md', '.github/**']
-    paths: ['.github/workflows/build.yml']
+
+permissions:
+  contents: write
 
 jobs:
-  build:
-    strategy:
-      fail-fast: false
-      matrix:
-        nim-version: [stable, devel]
-        os: [ubuntu-latest, windows-latest] # Add macOS-latest if/when you're supporting them
-
-    runs-on: ${{ matrix.os }}
-
-    steps:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps: 
     - uses: actions/checkout@v3
 
     - name: Get Date
@@ -32,9 +24,9 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ~/.choosenim
-        key: ${{ runner.os }}-choosenim-${{ matrix.nim-version }}-${{ steps.get-date.outputs.date }}
+        key: ${{ runner.os }}-choosenim-devel-${{ steps.get-date.outputs.date }}
         restore-keys: |
-          ${{ runner.os }}-choosenim-${{ matrix.nim-version }}-
+          ${{ runner.os }}-choosenim-devel-
 
     - name: Cache nimble
       id: cache-nimble
@@ -47,7 +39,13 @@ jobs:
 
     - uses: jiro4989/setup-nim-action@v1
       with:
-        nim-version: ${{ matrix.nim-version }}
+        nim-version: devel
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
-    - run: nimble test -y
+    - name: Generate docs
+      run: nimble doc -y --project src/*.nim --outDir htmldocs
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: htmldocs
