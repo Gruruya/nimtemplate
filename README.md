@@ -29,6 +29,4 @@ License
 ---
 Distributed under the AGPL-3.0-only License. See [LICENSE.md](LICENSE.md) for more information.  
 
-Do note this template is not licensed under the AGPL-3.0, it's just a template for making a project which is.  
 You can change the license freely in your generated project.  
-The template itself should be considered as being under the [CC0](https://creativecommons.org/publicdomain/zero/1.0/) license and in the public domain.
