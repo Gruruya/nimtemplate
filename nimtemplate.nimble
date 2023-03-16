@@ -17,9 +17,9 @@ when compiles(taskRequires):
   taskRequires "test", "https://github.com/disruptek/balls ^= 3.0.0"
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
+  before test: exec "nimble install -y"
 
 task test, "run tests":
-  exec "nimble install"
   when defined(windows):
         exec "balls.cmd"
   else: exec "balls"
