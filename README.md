@@ -1,8 +1,12 @@
-# You can use this nim template to jump start your nim library or project.
-![GitHub CI](https://github.com/Gruruya/nimtemplate/actions/workflows/build.yml/badge.svg)
+# nimtemplate ![GitHub CI](https://github.com/Gruruya/nimtemplate/actions/workflows/build.yml/badge.svg)
 
-This template includes:
-* AGPL-3.0 licence
+
+A template to jump start your nim library or project.
+
+_Click [here](https://github.com/Gruruya/nimtemplate/generate) to begin_
+
+## Highlights
+* __AGPL-3.0__ licence
 * src directory and a private common.nim
-* test directory
-* GitHub Actions to run the tests on GitHub
+* tests and examples directory
+* [GitHub Actions workflow](.github/workflows/build.yml) to run the tests
