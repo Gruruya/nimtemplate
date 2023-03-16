@@ -11,7 +11,7 @@ skipDirs = @["tests"]
 
 # Dependencies
 #requires "nim >= 1.6"
-# uncomment if you need a Nim language feature from a specific version
+# uncomment if you need a Nim stdlib feature from a specific version
 
 task tests, "run tests":
   when defined(windows):
