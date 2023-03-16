@@ -5,8 +5,8 @@
 #
 # To run these tests, simply execute `nimble test`.
 
-import ./nimtemplate
 import pkg/balls
+import ./nimtemplate
 
 suite "example":
   block operation:
