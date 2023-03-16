@@ -3,7 +3,7 @@
 A template to jump start your Nim library or project.
 
 * Tests using [balls](https://github.com/disruptek/balls)
-* Github Actions [workflows](../../actions)
+* GitHub Actions [workflows](../../actions)
   * Runs tests
   * Builds and deploys [docs on GitHub Pages](https://Gruruya.github.io/nimtemplate/nimtemplate.html)
 
@@ -16,9 +16,16 @@ _Click [here](../../../nimtemplate/generate) to begin_
 
 Usage
 ---
-Pick a new project name, note that the resulting module's name has to be a valid Nim identifier, for instance it can't have a `-` in it.  
+You're gonna want to change the names in the project. If you're on Linux you can do it like this:
 ```sh
-nimble prepare PROJNAME GITHUBUSER
+# Change these to define your new project name and GitHub username
+export PROJNAME = nimtemplate
+export GHUSER = Gruruya
+
+# Change text in the repo
+sed -i "s/nimtemplate/$PROJNAME/g" README.md nimtemplate.nimble src/nimtemplate.nim tests/test.nim .github/workflows/documentation.yml
+rename nimtemplate "$PROJNAME" * src/*
+sed -i "s/Gruruya/$GHUSER/g" README.md
 ```
 
 License
