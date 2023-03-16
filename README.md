@@ -1,4 +1,4 @@
-# nimtemplate:scroll:
+# nim-template:scroll:
 
 A template to jump start your nim library or project.
 
