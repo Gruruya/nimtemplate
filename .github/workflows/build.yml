@@ -22,7 +22,7 @@ jobs:
     
     - name: Get Date
       id: get-date
-      run: echo "::set-output name=date::$(date "+%Y-%m-%d")"
+      run: echo "date=$(date "+%Y-%m-%d")" >> $GITHUB_OUTPUT
       shell: bash
 
     - name: Cache choosenim
