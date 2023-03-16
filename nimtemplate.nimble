@@ -4,3 +4,6 @@ description = "Description of your library"
 license     = "AGPL-3.0-only"
 
 srcDir = "src"
+# uncomment if this program includes a binary
+# also add '- run: nimble build -y' to the end of the .github/workflows/build.yml file
+# bin = @["nimtemplate"]
