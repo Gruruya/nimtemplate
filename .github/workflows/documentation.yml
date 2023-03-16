@@ -45,7 +45,7 @@ jobs:
     - name: Generate docs
       run: nimble doc -y --project src/nimtemplate.nim --outDir:htmldocs
 
-    - run: ln nimtemplate.html htmldocs/index.html
+    - run: ln htmldocs/nimtemplate.html htmldocs/index.html
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
