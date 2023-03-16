@@ -10,7 +10,5 @@ _Click [here](../../../nimtemplate/generate) to begin_
 [![License](https://img.shields.io/github/license/Gruruya/nimtemplate?logo=GNU&logoColor=000000&labelColor=FFFFFF&color=663366)](LICENSE.md)
 
 ## Highlights
-* __AGPL-3.0__ licence
-* src directory and a private common.nim
-* tests and examples directory
+* Tests using [balls](https://github.com/disruptek/balls)
 * [GitHub Actions workflow](.github/workflows/build.yml) to run the tests
