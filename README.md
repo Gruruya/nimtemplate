@@ -1,6 +1,6 @@
 # nimtemplate:scroll:
 
-A template to jump start your nim library or project.
+A template to jump start your Nim library or project.
 
 * Tests using [balls](https://github.com/disruptek/balls)
 * Github Actions workflows
