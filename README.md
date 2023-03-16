@@ -16,7 +16,7 @@ _Click [here](../../../nimtemplate/generate) to begin_
 
 Usage
 ---
-Pick a new name, do note that it has to follow Nim naming requirements, for instance it can't have a `-` in it.  
+Pick a new name, do note that the module's name has to be a valid Nim identifier, for instance it can't have a `-` in it.  
 ```sh
 ## Pick a NEWNAME and change from nimtemplate to it
 sed -i 's/nimtemplate/NEWNAME/g' README.md nimtemplate.nimble src/nimtemplate.nim tests/test.nim .github/workflows/documentation.yml  
