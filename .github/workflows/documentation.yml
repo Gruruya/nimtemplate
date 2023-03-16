@@ -2,7 +2,7 @@ name: documentation
 
 on:
   push:
-    paths: ['.github/workflows/build.yml', 'src/**']
+    paths: ['.github/workflows/documentation.yml', 'src/**']
     branches: master
 
 permissions:

@@ -2,10 +2,10 @@ name: build
 
 on:
   push:
-    paths-ignore: ['*.md', '.github/**']
+    paths: ['!*.md', '!.github/**', '.github/workflows/build.yml']
     branches: master
   pull_request:
-    paths-ignore: ['*.md', '.github/**']
+    paths: ['!*.md', '!.github/**', '.github/workflows/build.yml']
 
 jobs:
   build:
