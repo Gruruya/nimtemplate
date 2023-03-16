@@ -6,7 +6,9 @@ _Click [here](../../../nimtemplate/generate) to begin_
 
 ---
 ![GitHub CI](../../actions/workflows/build.yml/badge.svg)
-[![License](https://img.shields.io/github/license/Gruruya/nimtemplate?logo=GNU)](#license)
+![Minimum supported Nim version](https://img.shields.io/badge/nim-1.6.11+-informational?logo=Nim&labelColor=1E202A&color=F3D400)
+[![License](https://img.shields.io/github/license/Gruruya/nimtemplate?logo=GNU&logoColor=000000&labelColor=FFFFFF&color=663366)](LICENSE.md)
+
 ## Highlights
 * __AGPL-3.0__ licence
 * src directory and a private common.nim
