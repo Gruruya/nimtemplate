@@ -24,4 +24,4 @@ task test, "run tests":
     when defined(windows):
           "balls.cmd"
     else: "balls"
-  exec balls & " --backend:c"
+  exec balls & " --backend:c --gc:orc --gc:arc --gc:refc"
