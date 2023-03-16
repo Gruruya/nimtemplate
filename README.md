@@ -11,4 +11,4 @@ _Click [here](../../../nimtemplate/generate) to begin_
 
 ## Highlights
 * Tests using [balls](https://github.com/disruptek/balls)
-* [GitHub Actions workflow](.github/workflows/build.yml) to run the tests
+* [GitHub Actions workflow](.github/workflows/build.yml) to run those tests

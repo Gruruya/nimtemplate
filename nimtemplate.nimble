@@ -21,6 +21,4 @@ task tests, "run tests":
 when compiles(taskRequires):
   taskRequires "test", "https://github.com/disruptek/balls ^= 3.0.0"
 else:
-#  before test:
-#    exec "nimble install -y https://github.com/disruptek/balls"
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
