@@ -3,11 +3,9 @@ name: build
 on:
   push:
     paths-ignore: ['*.md', '.github/**']
-    paths: ['.github/workflows/build.yml']
     branches: master
   pull_request:
     paths-ignore: ['*.md', '.github/**']
-    paths: ['.github/workflows/build.yml']
 
 jobs:
   build:

@@ -2,7 +2,7 @@ name: documentation
 
 on:
   push:
-    paths: 'src/**'
+    paths: ['.github/workflows/build.yml', 'src/**']
     branches: master
 
 permissions:
@@ -47,5 +47,5 @@ jobs:
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: htmldocs
+      with:
+        folder: htmldocs
