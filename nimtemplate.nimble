@@ -13,8 +13,9 @@ skipDirs = @["tests"]
 #requires "nim >= 1.6"
 # uncomment if you need a Nim language feature from a specific version
 
+taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
+
 task test, "run tests":
-  requires "balls >= 3.0.0 & < 4.0.0"
   when defined(windows):
         exec "balls.cmd"
   else: exec "balls"
