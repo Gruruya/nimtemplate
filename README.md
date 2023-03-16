@@ -18,13 +18,9 @@ Usage
 ---
 Pick a new name, do note that the module's name has to be a valid Nim identifier, for instance it can't have a `-` in it.  
 ```sh
-## Pick a NEWNAME and change from nimtemplate to it
-sed -i 's/nimtemplate/NEWNAME/g' README.md nimtemplate.nimble src/nimtemplate.nim tests/test.nim .github/workflows/documentation.yml  
-rename nimtemplate NEWNAME * src/*
-
-## Swap-out my GitHub username for your USERNAME
-sed -i 's/Gruruya/USERNAME/g' README.md  
+nimble prepare NEWNAME GITHUBUSER
 ```
+
 License
 ---
 Distributed under the AGPL-3.0-only License. See [LICENSE.md](LICENSE.md) for more information.  
