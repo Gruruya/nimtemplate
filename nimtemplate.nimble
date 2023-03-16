@@ -20,6 +20,8 @@ else:
   before test: exec "nimble install -y"
 
 task test, "run tests":
-  when defined(windows):
-        exec "balls.cmd"
-  else: exec "balls"
+  let balls =
+    when defined(windows):
+          "balls.cmd"
+    else: "balls"
+  exec balls & " --backend:c"
