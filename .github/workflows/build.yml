@@ -2,10 +2,10 @@ name: build
 
 on:
   push:
-    paths-ignore: '*.md'
+    paths-ignore: ['*.md', '.github/dependabot.yml']
     branches: master
   pull_request:
-    paths-ignore: '*.md'
+    paths-ignore: ['*.md', '.github/dependabot.yml']
 
 jobs:
   build:
