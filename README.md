@@ -1,10 +1,12 @@
-# nimtemplate ![GitHub CI](https://github.com/Gruruya/nimtemplate/actions/workflows/build.yml/badge.svg)
-
+# nimtemplate:scroll:
 
 A template to jump start your nim library or project.
 
-_Click [here](https://github.com/Gruruya/nimtemplate/generate) to begin_
+_Click [here](../../../nimtemplate/generate) to begin_
 
+---
+![GitHub CI](../../actions/workflows/build.yml/badge.svg)
+[![License](https://img.shields.io/github/license/Gruruya/nimtemplate?logo=GNU)](#license)
 ## Highlights
 * __AGPL-3.0__ licence
 * src directory and a private common.nim
