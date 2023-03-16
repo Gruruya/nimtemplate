@@ -5,9 +5,9 @@ A template to jump start your nim library or project.
 * Tests using [balls](https://github.com/disruptek/balls)
 * Github Actions workflows
   * Runs tests
-  * Builds and deploys docs via GitHub pages
+  * Builds and deploys [docs](https://Gruruya.github.io/nimtemplate/nimtemplate.html) on GitHub Pages
 
-_Click [here](../../../nimtemplate/generate) to begin_
+_Click [here](../../../nimtemplate/generate) to begin_  
 
 ---
 [![GitHub CI](../../actions/workflows/build.yml/badge.svg)](../../actions/workflows/build.yml)
