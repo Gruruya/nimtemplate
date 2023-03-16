@@ -43,7 +43,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Generate docs
-      run: nimble doc -y --project src/*.nim --outDir htmldocs
+      run: nimble doc -y --project src/*.nim --outDir:htmldocs
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
