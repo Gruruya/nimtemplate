@@ -1,5 +1,5 @@
 version     = "0.0.0"
-author      = "Your name"
+author      = "Gruruya"
 description = "Description of your library"
 license     = "AGPL-3.0-only"
 

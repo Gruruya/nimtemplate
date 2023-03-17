@@ -23,9 +23,9 @@ export GHUSER=Gruruya
 export PROJNAME=nimtemplate
 
 # Change text in the repo
+sed -i "s/Gruruya/$GHUSER/g" README.md nimtemplate.nimble
 sed -i "s/nimtemplate/$PROJNAME/g" README.md nimtemplate.nimble src/nimtemplate.nim tests/test.nim .github/workflows/documentation.yml
 rename nimtemplate "$PROJNAME" * src/*
-sed -i "s/Gruruya/$GHUSER/g" README.md
 ```
 
 #### Note on the License
