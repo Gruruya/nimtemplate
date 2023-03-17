@@ -19,8 +19,8 @@ Usage
 You're gonna want to change the names in the project. If you're on Linux you can do it like this:
 ```sh
 # Change these to define your new project name and GitHub username
-export PROJNAME = nimtemplate
-export GHUSER = Gruruya
+export GHUSER=Gruruya
+export PROJNAME=nimtemplate
 
 # Change text in the repo
 sed -i "s/nimtemplate/$PROJNAME/g" README.md nimtemplate.nimble src/nimtemplate.nim tests/test.nim .github/workflows/documentation.yml
