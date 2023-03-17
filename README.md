@@ -28,8 +28,5 @@ rename nimtemplate "$PROJNAME" * src/*
 sed -i "s/Gruruya/$GHUSER/g" README.md
 ```
 
-License
----
-Distributed under the AGPL-3.0-only License. See [LICENSE.md](LICENSE.md) for more information.  
-
-You can freely change the license in your project generated with this template.  
+#### Note on the License
+You can change the license freely in your project generated with this template.
