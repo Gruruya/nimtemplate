@@ -65,10 +65,14 @@ jobs:
         dockerRunArgs: |
             --volume "$HOME/.nimble:/nimble"
 
+        env: |
+          NIMBLE_DIR: '/nimble'
+
         install: |
           apt-get update -q -y
           apt-get install -q -y nim
 
         run: |
+          ls /nimble
           export PATH="$PATH:$HOME/.nimble/bin"
-          nimble test -y --nimbleDir:/nimble
+          nimble test -y
