@@ -63,16 +63,13 @@ jobs:
         githubToken: ${{ secrets.GITHUB_TOKEN }}
 
         dockerRunArgs: |
-            --volume "$HOME/.nimble:/nimble"
-
-        env: |
-          NIMBLE_DIR: '/nimble'
+            --volume "$HOME/.nimble:/root/.nimble"
 
         install: |
           apt-get update -q -y
           apt-get install -q -y nim
 
         run: |
-          ls /nimble
-          export PATH="$PATH:$NIMBLE_DIR/bin"
+          ls "$NIMBLE_DIR"
+          export PATH="$PATH:${$NIMBLE_DIR:-$HOME/.nimble}/bin"
           nimble test -y
