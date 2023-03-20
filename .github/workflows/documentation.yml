@@ -2,7 +2,7 @@ name: documentation
 
 on:
   push:
-    paths: ['.github/workflows/documentation.yml', '.github/workflows/install-nim/action.yml', 'src/**']
+    paths: ['.github/workflows/documentation.yml', '.github/workflows/nim-run/action.yml', 'src/**']
     branches: master
 
 permissions:
@@ -17,23 +17,21 @@ concurrency:
 
 jobs:
   build-docs:
+    name: Build documentation
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Install Nim
-      uses: './.github/workflows/install-nim'
+    - name: Install Nim, then generate docs
+      uses: './.github/workflows/nim-run'
       with:
-        version: 'devel'
+        run: nimble doc -y --project src/nimtemplate.nim --outDir:htmldocs
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Generate docs
-      run: nimble doc -y --project src/nimtemplate.nim --outDir:htmldocs
 
     - run: ln -s nimtemplate.html htmldocs/index.html
 
-    - name: Setup Pages
+    - name: Setup HTML for GitHub Pages
       uses: actions/configure-pages@v3
 
     - name: Upload Docs
@@ -42,6 +40,7 @@ jobs:
         path: 'htmldocs'
 
   deploy-gh-pages:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     needs: build-docs
     environment:
