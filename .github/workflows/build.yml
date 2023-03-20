@@ -43,12 +43,11 @@ jobs:
     - name: Build and test
       uses: vmactions/freebsd-vm@v0
       with:
-        usesh: true
         prepare: |
           pkg install -y nim
 
         run: |
-          export PATH="$PATH:$HOME/.nimble/bin"
+          set path = ($path $HOME/.nimble/bin)
           nimble test -y
 
   build-non-x86:
