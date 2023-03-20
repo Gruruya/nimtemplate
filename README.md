@@ -10,7 +10,7 @@ A template to jump start your Nim library or project.
 _Click [here](../../../nimtemplate/generate) to begin_  
 
 ---
-[![GitHub CI](../../actions/workflows/build.yml/badge.svg)](../../actions/workflows/build.yml)
+[![GitHub CI](../../actions/workflows/build.yml/badge.svg?branch=master)](../../actions/workflows/build.yml)
 [![Minimum supported Nim version](https://img.shields.io/badge/Nim-1.6.11+-informational?logo=Nim&labelColor=232733&color=F3D400)](https://nim-lang.org)
 [![License](https://img.shields.io/github/license/Gruruya/nimtemplate?logo=GNU&logoColor=000000&labelColor=FFFFFF&color=663366)](LICENSE.md)
 
