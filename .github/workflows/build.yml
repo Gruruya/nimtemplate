@@ -3,7 +3,7 @@ name: build
 on:
   push:
     paths: ['**', '!*.md', '!.github/**', '.github/workflows/build.yml', '.github/workflows/install-nim/action.yml']
-#    branches: master
+    branches: master
   pull_request:
     paths: ['**', '!*.md', '!.github/**', '.github/workflows/build.yml', '.github/workflows/install-nim/action.yml']
 
