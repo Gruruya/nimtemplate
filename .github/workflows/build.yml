@@ -62,8 +62,8 @@ jobs:
         distro: ubuntu_devel
         githubToken: ${{ secrets.GITHUB_TOKEN }}
 
-#        dockerRunArgs: |
-#            --volume "$HOME/.nimble:.nimble"
+        dockerRunArgs: |
+            --volume "$HOME/.nimble:/root/.nimble"
 
         install: |
           apt-get update -q -y
@@ -72,5 +72,6 @@ jobs:
         run: |
           ls /home
           whoami
+          ls ~/.nimble
           export PATH="$PATH:$HOME/.nimble/bin"
           nimble test -y
