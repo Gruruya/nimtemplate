@@ -74,5 +74,5 @@ jobs:
 
         run: |
           ls /nimble
-          export PATH="$PATH:$HOME/.nimble/bin"
+          export PATH="$PATH:$NIMBLE_DIR/bin"
           nimble test -y
