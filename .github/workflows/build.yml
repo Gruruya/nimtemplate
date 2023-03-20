@@ -43,8 +43,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: uraimo/run-on-arch-action@v2
-      name: Run commands
-      id: runcmd
+      name: Initialize ${{ matrix.arch }} container, build, and test
       with:
         arch: ${{ matrix.arch }}
         distro: ubuntu_devel
@@ -57,5 +56,5 @@ jobs:
         run: |
           apt-get update -q -y
           apt-get install -q -y nim
-          export PATH=$PATH:$HOME/.nimble/bin
+          export PATH="$PATH:$HOME/.nimble/bin"
           nimble test -y
