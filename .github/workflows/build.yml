@@ -70,6 +70,6 @@ jobs:
           apt-get install -q -y nim
 
         run: |
-          ls "$NIMBLE_DIR"
+          ls ${NIMBLE_DIR:-$HOME/.nimble}
           export PATH="$PATH:${NIMBLE_DIR:-$HOME/.nimble}/bin"
           nimble test -y
