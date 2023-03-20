@@ -53,8 +53,10 @@ jobs:
         githubToken: ${{ github.token }}
 
         # Set an output parameter `uname` for use in subsequent steps
-        run: |
+        install: |
           apt-get update -q -y
           apt-get install -q -y nim
+
+        run: |
           export PATH="$PATH:$HOME/.nimble/bin"
           nimble test -y
