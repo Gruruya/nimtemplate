@@ -3,7 +3,7 @@ name: build
 on:
   push:
     paths: ['**', '!*.md', '!.github/**', '.github/workflows/build.yml', '.github/workflows/install-nim/action.yml']
-    branches: master
+#   branches: master
   pull_request:
     paths: ['**', '!*.md', '!.github/**', '.github/workflows/build.yml', '.github/workflows/install-nim/action.yml']
 
@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         nim-version: [stable, devel]
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     runs-on: ${{ matrix.os }}
     name: Build and test
@@ -30,6 +30,26 @@ jobs:
 
     - name: Build and test
       run: nimble test -y
+
+  build-freebsd:
+    strategy:
+      fail-fast: false
+
+    runs-on: macos-latest
+    name: Build and test (stable, FreeBSD)
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build and test
+      uses: vmactions/freebsd-vm@v0
+      with:
+        usesh: true
+        prepare: |
+          pkg install -y nim
+
+        run: |
+          export PATH="$PATH:$HOME/.nimble/bin"
+          nimble test -y
 
   build-non-x86:
     strategy:
