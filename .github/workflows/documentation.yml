@@ -2,7 +2,7 @@ name: documentation
 
 on:
   push:
-    paths: ['.github/workflows/documentation.yml', 'src/**']
+    paths: ['.github/workflows/documentation.yml', '.github/workflows/install-nim/action.yml', 'src/**']
     branches: master
 
 permissions:
@@ -22,33 +22,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Get Date
-      id: get-date
-      run: echo "date=$(date "+%Y-%m-%d")" >> $GITHUB_OUTPUT
-      shell: bash
-
-    - name: Cache choosenim
-      id: cache-choosenim
-      uses: actions/cache@v3
+    - name: Install Nim
+      uses: './.github/workflows/install-nim'
       with:
-        path: ~/.choosenim
-        key: ${{ runner.os }}-choosenim-devel-${{ steps.get-date.outputs.date }}
-        restore-keys: |
-          ${{ runner.os }}-choosenim-devel-
-
-    - name: Cache nimble
-      id: cache-nimble
-      uses: actions/cache@v3
-      with:
-        path: ~/.nimble
-        key: ${{ runner.os }}-nimble-${{ hashFiles('*.nimble') }}
-        restore-keys: |
-          ${{ runner.os }}-nimble-
-
-    - uses: jiro4989/setup-nim-action@v1
-      with:
-        nim-version: devel
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        version: ${{ matrix.nim-version }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Generate docs
       run: nimble doc -y --project src/nimtemplate.nim --outDir:htmldocs
