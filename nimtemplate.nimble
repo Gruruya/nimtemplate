@@ -5,7 +5,7 @@ license     = "AGPL-3.0-only"
 
 #bin = @["nimtemplate"]
 # uncomment if this program includes a binary
-# also add '- run: nimble build -y' to the end of the .github/workflows/build.yml file
+# also add 'nimble build -y' to the 'run:' block of the build job in .github/workflows/build.yml
 srcDir = "src"
 skipDirs = @["tests"]
 
