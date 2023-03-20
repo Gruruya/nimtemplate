@@ -43,6 +43,7 @@ jobs:
     - name: Build and test
       uses: vmactions/freebsd-vm@v0
       with:
+        sync: sshfs
         copyback: false
         #mem: 1024 # Default, change this as needed
         prepare: |
