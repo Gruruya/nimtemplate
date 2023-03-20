@@ -56,7 +56,5 @@ jobs:
         # Set an output parameter `uname` for use in subsequent steps
         run: |
           apt-get update -q -y
-          apt-get install -q -y git
-          ls
-          ls /
-          ls ~
+          apt-get install -q -y nim
+          nimble test -y
