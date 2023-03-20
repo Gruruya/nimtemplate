@@ -17,7 +17,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     name: Build and test
-    
+
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -35,10 +35,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: ['aarch64']
+        arch: ['aarch64', 'riscv64', 'ppc64le']
 
     runs-on: ubuntu-latest
-    name: Build and test for ${{ matrix.arch }}
+    name: Build and test (stable, ubuntu-devel, ${{ matrix.arch }})
 
     steps:
     - uses: actions/checkout@v3
@@ -48,13 +48,14 @@ jobs:
       with:
         arch: ${{ matrix.arch }}
         distro: ubuntu_devel
-          
+
         # Not required, but speeds up builds by storing container images in
         # a GitHub package registry.
         githubToken: ${{ github.token }}
-        
+
         # Set an output parameter `uname` for use in subsequent steps
         run: |
           apt-get update -q -y
           apt-get install -q -y nim
+          export PATH=$PATH:$HOME/.nimble/bin
           nimble test -y
