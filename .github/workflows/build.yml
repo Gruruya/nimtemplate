@@ -42,8 +42,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: uraimo/run-on-arch-action@v2
-      name: Initialize ${{ matrix.arch }} container, build, and test
+
+    - name: Cache nimble
+      id: cache-nimble
+      uses: actions/cache@v3
+      with:
+        path: ~/.nimble
+        key: ${{ matrix.arch }}-nimble-${{ hashFiles('*.nimble') }}
+        restore-keys: |
+          ${{ matrix.arch }}-nimble-
+
+    - name: Initialize ${{ matrix.arch }} container, build, and test
+      uses: uraimo/run-on-arch-action@v2
       with:
         arch: ${{ matrix.arch }}
         distro: ubuntu_devel
