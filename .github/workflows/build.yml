@@ -43,7 +43,8 @@ jobs:
     name: Build and test (stable, ubuntu-devel, ${{ matrix.arch }})
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
 
     - name: Cache nimble
       id: cache-nimble
@@ -61,6 +62,9 @@ jobs:
         distro: ubuntu_devel
         githubToken: ${{ secrets.GITHUB_TOKEN }}
 
+        dockerRunArgs: |
+            --volume "$HOME/.nimble":'$HOME/.nimble'
+        
         install: |
           apt-get update -q -y
           apt-get install -q -y nim
