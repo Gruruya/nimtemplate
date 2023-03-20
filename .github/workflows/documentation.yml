@@ -25,7 +25,7 @@ jobs:
     - name: Install Nim
       uses: './.github/workflows/install-nim'
       with:
-        version: ${{ matrix.nim-version }}
+        version: 'devel'
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Generate docs
