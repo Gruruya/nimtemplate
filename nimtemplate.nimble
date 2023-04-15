@@ -3,11 +3,11 @@ author      = "Gruruya"
 description = "Description of your library"
 license     = "AGPL-3.0-only"
 
+srcDir = "src"
+skipDirs = @["tests"]
 #bin = @["nimtemplate"]
 # uncomment if this program includes a binary
 # also add 'nimble build -y' to the 'run:' block of the build job in .github/workflows/build.yml
-srcDir = "src"
-skipDirs = @["tests"]
 
 # Dependencies
 #requires "nim >= 1.6"
@@ -24,4 +24,4 @@ task test, "run tests":
     when defined(windows):
           "balls.cmd"
     else: "balls"
-  exec balls & " --backend:c --mm:orc --mm:arc --mm:refc --define:debug --define:release --define:danger"
+  exec balls & " --backend:c --mm:arc --mm:refc --define:danger"
