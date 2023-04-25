@@ -27,7 +27,7 @@ jobs:
       uses: './.github/workflows/nim-run'
       with:
         run: nimble doc -y --project src/nimtemplate.nim --outDir:htmldocs
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - run: ln -s nimtemplate.html htmldocs/index.html
 
