@@ -40,6 +40,8 @@ jobs:
     - name: Check tests status
       id: check_status
       shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
       run: |
         last_status=$(gh run list --workflow action.yaml | grep -oh "completed.*" | head -1 | awk '{print \$2}')
         echo "status=$last_status" >> $GITHUB_OUTPUT
