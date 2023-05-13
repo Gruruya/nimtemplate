@@ -76,5 +76,5 @@ runs:
 
     - name: Output tests result
       shell: bash
-      if: ${{ failure() }}
+      if: failure()
       run: echo "failure=true" >> $GITHUB_OUTPUT
