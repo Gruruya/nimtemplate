@@ -19,7 +19,7 @@ inputs:
 outputs:
   failure:
     description: "Did the ran commands fail?"
-    value: ${{ steps.status.outputs.failure }}
+    value: ${{ steps.tests.outputs.status }}
 
 runs:
   using: "composite"
@@ -55,11 +55,15 @@ runs:
         repo-token: ${{ inputs.token }}
 
     - name: Run
+      id: tests
       if: ${{ inputs.arch == 'x86_64' || inputs.arch == 'x86' }}
-      run: ${{ inputs.run }}
+      run: |
+        ${{ inputs.run }}
+        echo "status=$?" >> $GITHUB_OUTPUT
       shell: bash
 
     - name: Setup Nim for ${{ inputs.arch }} and Run
+      id: tests
       if: ${{ inputs.arch != 'x86_64' && inputs.arch != 'x86' }}
       uses: uraimo/run-on-arch-action@v2
       with:
@@ -77,8 +81,4 @@ runs:
         run: |
           export PATH="$PATH:${NIMBLE_DIR:-$HOME/.nimble}/bin"
           ${{ inputs.run }}
-
-    - id: status
-      if: failure()
-      run: echo "failure=true" >> $GITHUB_OUTPUT
-      shell: bash
+          echo "status=$?" >> $GITHUB_OUTPUT
