@@ -30,6 +30,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Install Nim, then build and test
+      id: tests
       uses: './.github/workflows/nim-run'
       with:
         run: nimble test -y
@@ -37,15 +38,6 @@ jobs:
         arch: ${{ matrix.arch }}
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Check tests status
-      id: check_status
-      shell: bash
-      env:
-        GH_TOKEN: ${{ github.token }}
-      run: |
-        last_status=$(gh run list --workflow action.yml | grep -oh "completed.*" | head -1 | awk '{print $2}')
-        echo "status=$last_status" >> $GITHUB_OUTPUT
-
     - name: Fail if tests failed
-      if: steps.check_status.outputs.status == 'failure'
+      if: steps.tests.result == 'failure'
       run: exit 1
