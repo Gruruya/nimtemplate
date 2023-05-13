@@ -36,3 +36,7 @@ jobs:
         version: ${{ matrix.nim-version }}
         arch: ${{ matrix.arch }}
         token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Check if successful
+      if: ${{ failure() }}
+      run: exit 1
