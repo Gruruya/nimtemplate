@@ -10,4 +10,4 @@ import ./nimtemplate
 
 suite "example":
   block operation:
-    check 1 + 1 == 2
+    check 1 + 1 == 3
