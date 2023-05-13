@@ -38,6 +38,4 @@ jobs:
         arch: ${{ matrix.arch }}
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Fail if tests failed
-      if: steps.tests.outputs.failure == 'true'
-      run: exit 1
+    - run: exit ${{ steps.tests.outputs.failure }}
