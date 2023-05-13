@@ -38,4 +38,6 @@ jobs:
         arch: ${{ matrix.arch }}
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - run: exit ${{ steps.tests.outputs.failure }}
+    - if: ${{ inputs.arch == 'x86_64' || inputs.arch == 'x86' }}
+      run: exit ${{ steps.tests.outputs.failure }}
+    - run: exit ${{ steps.tests.outputs.failure-nonx86 }}
