@@ -43,7 +43,7 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
-        last_status=$(gh run list --workflow action.yaml | grep -oh "completed.*" | head -1 | awk '{print \$2}')
+        last_status=$(gh run list --workflow action.yml | grep -oh "completed.*" | head -1 | awk '{print \$2}')
         echo "status=$last_status" >> $GITHUB_OUTPUT
 
     - name: Fail if tests failed
