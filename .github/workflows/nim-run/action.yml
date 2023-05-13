@@ -20,6 +20,9 @@ outputs:
   failure:
     description: "Did the ran commands fail?"
     value: ${{ steps.tests.outputs.status }}
+  failure-nonx86:
+    description: "Did the ran commands fail?"
+    value: ${{ steps.tests-nonx86.outputs.status }}
 
 runs:
   using: "composite"
@@ -63,7 +66,7 @@ runs:
       shell: bash
 
     - name: Setup Nim for ${{ inputs.arch }} and Run
-      id: tests
+      id: tests-nonx86
       if: ${{ inputs.arch != 'x86_64' && inputs.arch != 'x86' }}
       uses: uraimo/run-on-arch-action@v2
       with:
