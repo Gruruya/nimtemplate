@@ -16,15 +16,19 @@ inputs:
     description: 'Architecture to build Nim for.'
     required: false
     default: 'x86_64'
+outputs:
+  failure:
+    description: "Did the ran commands fail?"
+    value: ${{ steps.status.outputs.failure }}
 
 runs:
   using: "composite"
   steps:
     - name: Get Date
-      shell: bash
       id: get-date
       if: ${{ inputs.arch == 'x86_64' || inputs.arch == 'x86' }}
       run: echo "date=$(date "+%Y-%m-%d")" >> $GITHUB_OUTPUT
+      shell: bash
 
     - name: Cache choosenim
       if: ${{ inputs.arch == 'x86_64' || inputs.arch == 'x86' }}
@@ -51,9 +55,9 @@ runs:
         repo-token: ${{ inputs.token }}
 
     - name: Run
-      shell: bash
       if: ${{ inputs.arch == 'x86_64' || inputs.arch == 'x86' }}
       run: ${{ inputs.run }}
+      shell: bash
 
     - name: Setup Nim for ${{ inputs.arch }} and Run
       if: ${{ inputs.arch != 'x86_64' && inputs.arch != 'x86' }}
@@ -74,7 +78,7 @@ runs:
           export PATH="$PATH:${NIMBLE_DIR:-$HOME/.nimble}/bin"
           ${{ inputs.run }}
 
-    - name: Output tests result
-      shell: bash
+    - id: status
       if: failure()
-      run: echo "::set-output name=failure::true"
+      run: echo "failure=true" >> $GITHUB_OUTPUT
+      shell: bash
