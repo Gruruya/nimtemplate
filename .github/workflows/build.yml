@@ -39,5 +39,5 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Fail if tests failed
-      if: steps.tests.result == 'failure'
+      if: steps.tests.outputs.failure == 'true'
       run: exit 1
