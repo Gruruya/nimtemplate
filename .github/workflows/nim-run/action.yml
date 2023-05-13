@@ -77,4 +77,4 @@ runs:
     - name: Output tests result
       shell: bash
       if: failure()
-      run: echo "failure=true" >> $GITHUB_OUTPUT
+      run: echo "::set-output name=failure::true"
