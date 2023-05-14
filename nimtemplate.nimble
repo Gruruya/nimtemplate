@@ -13,7 +13,7 @@ skipDirs = @["tests"]
 #requires "nim >= 1.6"
 # uncomment if you need a Nim stdlib feature from a specific version
 
-when compiles(taskRequires):
+when declared(taskRequires):
   taskRequires "test", "https://github.com/disruptek/balls ^= 3.0.0"
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
