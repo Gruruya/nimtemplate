@@ -14,7 +14,9 @@ skipDirs = @["tests"]
 # uncomment if you need a Nim stdlib feature from a specific version
 
 when declared(taskRequires):
-  taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0"
+  when (NimMajor, NimMinor) >= (1, 7):
+        taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0"
+  else: taskRequires "test", "https://github.com/disruptek/balls#head"
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
   before test: exec "nimble install -y"
