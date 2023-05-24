@@ -7,11 +7,11 @@ srcDir = "src"
 skipDirs = @["tests"]
 #bin = @["nimtemplate"]
 # uncomment if this program includes a binary
-# also add 'nimble build -y' to the 'run:' block of the build job in .github/workflows/build.yml
+# also add nimble build -y to the run block of the build job in .github/workflows/build.yml
 
 # Dependencies
 #requires "nim >= 1.6"
-# uncomment if you need a Nim stdlib feature from a specific version
+# uncomment if you need a Nim feature from a specific version
 
 when declared(taskRequires):
   when (NimMajor, NimMinor) >= (1, 7):
