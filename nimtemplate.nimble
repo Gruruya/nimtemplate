@@ -7,7 +7,7 @@ srcDir = "src"
 skipDirs = @["tests"]
 #bin = @["nimtemplate"]
 # uncomment if this program includes a binary
-# also add nimble build -y to the run block of the build job in .github/workflows/build.yml
+# also add nimble build -y to the run field of the build and test job in .github/workflows/build.yml
 
 # Dependencies
 #requires "nim >= 1.6"
