@@ -38,7 +38,7 @@ if input.len == 4:
   let email = input[3]
 
   for file in ["README.md", "nimtemplate.nimble", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/nim-run/action.yml"]:
-    file.writeFile file.readFile.replace("Gruruya", author).replace("gruruya.chi4c@slmails.com", email)
+    file.writeFile file.readFile.multiReplace(("Gruruya", author), ("gruruya.chi4c@slmails.com", email))
 
   "rebrand.nim".writeFile "rebrand.nim".readFile.multiReplace(("nimtemplate", name), ("Description of your program.", description), ("Gruruya", author), ("gruruya.chi4c@slmails.com", email))
 else:
