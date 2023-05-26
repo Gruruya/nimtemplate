@@ -1,4 +1,4 @@
-# nimtemplate --- Description of your library.
+# nimtemplate --- Description of your program.
 # Copyright © 2023 Gruruya <gruruya.chi4c@slmails.com>
 #
 # This file is part of nimtemplate.

@@ -1,6 +1,6 @@
 version     = "0.0.0"
 author      = "Gruruya"
-description = "Description of your library"
+description = "Description of your program."
 license     = "AGPL-3.0-only"
 
 srcDir = "src"
