@@ -10,8 +10,7 @@ skipDirs = @["tests"]
 # also add nimble build -y to the run field of the build and test job in .github/workflows/build.yml
 
 # Dependencies
-#requires "nim >= 1.6"
-# uncomment if you need a Nim feature from a specific version
+requires "nim >= 1.9.3"
 
 when declared(taskRequires):
   when (NimMajor, NimMinor) >= (1, 7):
