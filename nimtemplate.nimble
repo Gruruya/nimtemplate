@@ -14,7 +14,7 @@ skipDirs = @["tests"]
 # Uncomment if you require features from a specific Nim version
 
 when declared(taskRequires):
-  when (NimMajor, NimMinor) >= (1, 7):
+  when (NimMajor, NimMinor) >= (1, 7) and not defined(windows) and not defined(macosx):
         taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0"
   else: taskRequires "test", "https://github.com/disruptek/balls#head"
 else:
