@@ -1,4 +1,4 @@
-# nimtemplate --- Description of your program.
+# nimtemplate --- A template to jump start your Nim library or project.
 # Copyright © 2023 Gruruya <gruruya.chi4c@slmails.com>
 #
 # This file is part of nimtemplate.

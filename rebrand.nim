@@ -28,10 +28,7 @@ let name = input[0]
 let description = input[1]
 
 for file in ["README.md", "nimtemplate.nimble", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/nim-run/action.yml"]:
-  file.writeFile file.readFile.replace("nimtemplate", name)
-
-for file in ["nimtemplate.nimble", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/nim-run/action.yml"]:
-  file.writeFile file.readFile.replace("Description of your program.", description)
+  file.writeFile file.readFile.multiReplace(("nimtemplate", name), ("A template to jump start your Nim library or project.", description))
 
 if input.len == 4:
   let author = input[2]
@@ -40,9 +37,9 @@ if input.len == 4:
   for file in ["README.md", "nimtemplate.nimble", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/nim-run/action.yml"]:
     file.writeFile file.readFile.multiReplace(("Gruruya", author), ("gruruya.chi4c@slmails.com", email))
 
-  "rebrand.nim".writeFile "rebrand.nim".readFile.multiReplace(("nimtemplate", name), ("Description of your program.", description), ("Gruruya", author), ("gruruya.chi4c@slmails.com", email))
+  "rebrand.nim".writeFile "rebrand.nim".readFile.multiReplace(("nimtemplate", name), ("A template to jump start your Nim library or project.", description), ("Gruruya", author), ("gruruya.chi4c@slmails.com", email))
 else:
-  "rebrand.nim".writeFile "rebrand.nim".readFile.multiReplace(("nimtemplate", name), ("Description of your program.", description))
+  "rebrand.nim".writeFile "rebrand.nim".readFile.multiReplace(("nimtemplate", name), ("A template to jump start your Nim library or project.", description))
 
 moveFile("nimtemplate.nimble", name & ".nimble")
 moveFile("src/nimtemplate.nim", "src/" & name & ".nim")
