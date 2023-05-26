@@ -18,7 +18,7 @@ Usage
 ---
 You're gonna want to change the names in the project. I made a small utility for this, you can use it this way:
 ```sh
-nim r rebrand.nim "PROJECT NAME" "AUTHOR" "DESCRIPTION"
+nim r rebrand.nim "PROJECT NAME" "DESCRIPTION" "AUTHOR" "EMAIL"
 ```
 
 #### Note on the License

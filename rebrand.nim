@@ -15,32 +15,37 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with nimtemplate.  If not, see <http://www.gnu.org/licenses/>.
 
-## Rebrand the template repository.
+## Script to rebrand this template repository.
 
 import std/[os, strutils]
 
 let input = commandLineParams()
-if input.len != 3:
-  echo "Usage: rebrand [PROJECT NAME] [AUTHOR] [DESCRIPTION]"
+if input.len notin {2, 4}:
+  echo "Usage: rebrand [PROJECT NAME] [DESCRIPTION] [AUTHOR] [EMAIL]"
   quit 1
 
 let name = input[0]
-let author = input[1]
-let description = input[2]
+let description = input[1]
 
 for file in ["README.md", "nimtemplate.nimble", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/nim-run/action.yml"]:
   file.writeFile file.readFile.replace("nimtemplate", name)
 
-for file in ["README.md", "nimtemplate.nimble", "src/nimtemplate.nim", "tests/test.nim", ".github/workflows/documentation.yml"]:
-  file.writeFile file.readFile.replace("Gruruya", author)
-
 for file in ["nimtemplate.nimble", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/nim-run/action.yml"]:
   file.writeFile file.readFile.replace("Description of your program.", description)
+
+if input.len == 4:
+  let author = input[2]
+  let email = input[3]
+
+  for file in ["README.md", "nimtemplate.nimble", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/nim-run/action.yml"]:
+    file.writeFile file.readFile.replace("Gruruya", author).replace("gruruya.chi4c@slmails.com", email)
+
+  "rebrand.nim".writeFile "rebrand.nim".readFile.multiReplace(("nimtemplate", name), ("Description of your program.", description), ("Gruruya", author), ("gruruya.chi4c@slmails.com", email))
+else:
+  "rebrand.nim".writeFile "rebrand.nim".readFile.multiReplace(("nimtemplate", name), ("Description of your program.", description))
 
 moveFile("nimtemplate.nimble", name & ".nimble")
 moveFile("src/nimtemplate.nim", "src/" & name & ".nim")
 moveDir("src/nimtemplate", "src/" & name)
-
-"rebrand.nim".writeFile "rebrand.nim".readFile.replace("nimtemplate", name)
 
 echo "Done"
