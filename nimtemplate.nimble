@@ -12,13 +12,7 @@ skipDirs = @["tests"]
 # Dependencies
 requires "nim >= 1.9.3"
 
-when declared(taskRequires):
-  when (NimMajor, NimMinor) >= (1, 7):
-        taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0"
-  else: taskRequires "test", "https://github.com/disruptek/balls#head"
-else:
-  requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
-  before test: exec "nimble install -y"
+taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0"
 
 task test, "run tests":
   let balls =
