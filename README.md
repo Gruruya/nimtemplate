@@ -16,16 +16,9 @@ _Click [here](../../../nimtemplate/generate) to begin_
 
 Usage
 ---
-You're gonna want to change the names in the project. If you're on Linux you can do it like this:
+You're gonna want to change the names in the project. I made a small utility for this, you can use it this way:
 ```sh
-# Change these to define your new project name and GitHub username
-export GHUSER=Gruruya
-export PROJNAME=nimtemplate
-
-# Change text in the repo
-sed -i "s/Gruruya/$GHUSER/g" README.md nimtemplate.nimble
-sed -i "s/nimtemplate/$PROJNAME/g" README.md nimtemplate.nimble src/nimtemplate.nim tests/test.nim .github/workflows/documentation.yml
-rename nimtemplate "$PROJNAME" * src/*
+nim r rebrand.nim "PROJECT NAME" "AUTHOR" "DESCRIPTION"
 ```
 
 #### Note on the License
