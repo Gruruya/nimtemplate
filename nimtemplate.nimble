@@ -10,9 +10,16 @@ skipDirs = @["tests"]
 # also add nimble build -y to the run field of the build and test job in .github/workflows/build.yml
 
 # Dependencies
-requires "nim >= 1.9.3"
+#requires "nim >= 1.9.3"
+# Uncomment if you require features from a specific Nim version
 
-taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0"
+when declared(taskRequires):
+  when (NimMajor, NimMinor) >= (1, 7):
+        taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0"
+  else: taskRequires "test", "https://github.com/disruptek/balls#head"
+else:
+  requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
+  before test: exec "nimble install -y"
 
 task test, "run tests":
   let balls =
