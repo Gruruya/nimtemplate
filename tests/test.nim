@@ -23,7 +23,7 @@
 ## To run these tests, simply execute `nimble test`.
 
 import pkg/balls
-import ./nimtemplate
+import ../src/nimtemplate
 
 suite "example":
   block operation:
