@@ -8,5 +8,6 @@
 nimcache
 *.pdb
 *.ilk
+*.out
 .*
 !.github
