@@ -15,8 +15,8 @@ skipDirs = @["tests"]
 
 when declared(taskRequires):
   when (NimMajor, NimMinor) >= (1, 7) and not defined(windows) and not defined(macosx):
-        taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0"
-  else: taskRequires "test", "https://github.com/disruptek/balls#head"
+        taskRequires "test", "https://github.com/disruptek/balls >= 4.0.0"
+  else: taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
   before test: exec "nimble install -y"
