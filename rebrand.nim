@@ -4,15 +4,15 @@ import std/[os, strutils]
 
 let input = commandLineParams()
 if input.len notin {1, 2}:
-  echo "Usage: rebrand [PROJECT NAME] {AUTHOR}"
+  echo "Usage: rebrand PROJECT_NAME [AUTHOR]"
   quit 1
 
-template project: untyped = input[0]
+let project = input[0]
 for file in ["README.md", "nimtemplate.nimble", "tests/test.nim", ".github/workflows/documentation.yml", "rebrand.nim"]:
   file.writeFile file.readFile.replace("nimtemplate", project)
 
 if input.len == 2:
-  template author: untyped = input[1]
+  let author = input[1]
   for file in ["README.md", "nimtemplate.nimble", "rebrand.nim"]:
     file.writeFile file.readFile.replace("Gruruya", author)
 
