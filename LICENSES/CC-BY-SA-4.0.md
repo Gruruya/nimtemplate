@@ -1,10 +1,10 @@
 Attribution-ShareAlike 4.0 International
 ========================================
 
-    CREATIVE COMMONS CORPORATION ("CREATIVE COMMONS") IS NOT A LAW FIRM AND DOES NOT PROVIDE
+    CREATIVE COMMONS CORPORATION (“CREATIVE COMMONS”) IS NOT A LAW FIRM AND DOES NOT PROVIDE
     LEGAL SERVICES OR LEGAL ADVICE. DISTRIBUTION OF CREATIVE COMMONS PUBLIC LICENSES DOES NOT
     CREATE A LAWYER-CLIENT OR OTHER RELATIONSHIP. CREATIVE COMMONS MAKES ITS LICENSES AND
-    RELATED INFORMATION AVAILABLE ON AN "AS-IS" BASIS. CREATIVE COMMONS GIVES NO WARRANTIES
+    RELATED INFORMATION AVAILABLE ON AN “AS-IS” BASIS. CREATIVE COMMONS GIVES NO WARRANTIES
     REGARDING ITS LICENSES, ANY MATERIAL LICENSED UNDER THEIR TERMS AND CONDITIONS, OR ANY
     RELATED INFORMATION. CREATIVE COMMONS DISCLAIMS ALL LIABILITY FOR DAMAGES RESULTING FROM
     THEIR USE TO THE FULLEST EXTENT POSSIBLE.
@@ -30,7 +30,7 @@ exception or limitation to copyright. [More considerations for licensors.](https
 
 **_Considerations for the public:_** By using one of our public licenses, a
 licensor grants the public permission to use the licensed material under
-specified terms and conditions. If the licensor's permission is not necessary
+specified terms and conditions. If the licensor’s permission is not necessary
 for any reason-for example, because of any applicable exception or limitation to
 copyright-then that use is not regulated by the license. Our licenses grant only
 permissions under copyright and certain other rights that a licensor has
@@ -44,8 +44,8 @@ encouraged to respect those requests where reasonable. [More considerations for 
 
 By exercising the Licensed Rights (defined below), You accept and
 agree to be bound by the terms and conditions of this Creative Commons
-Attribution-ShareAlike 4.0 International Public License ("Public
-License"). To the extent this Public License may be interpreted as a
+Attribution-ShareAlike 4.0 International Public License (“Public
+License”). To the extent this Public License may be interpreted as a
 contract, You are granted the Licensed Rights in consideration of Your
 acceptance of these terms and conditions, and the Licensor grants You
 such rights in consideration of benefits the Licensor receives from
@@ -64,7 +64,7 @@ conditions.
        recording, Adapted Material is always produced where the Licensed
        Material is synched in timed relation with a moving image.
 
-* b. **Adapter's License** means the license You apply to Your
+* b. **Adapter’s License** means the license You apply to Your
        Copyright and Similar Rights in Your contributions to Adapted
        Material in accordance with the terms and conditions of this
        Public License.
@@ -165,7 +165,7 @@ conditions.
              Material. Every recipient of Adapted Material from You
              automatically receives an offer from the Licensor to
              exercise the Licensed Rights in the Adapted Material under
-             the conditions of the Adapter's License You apply.
+             the conditions of the Adapter’s License You apply.
 
         * C. No downstream restrictions. You may not offer or impose
              any additional or different terms or conditions on, or apply
@@ -244,19 +244,19 @@ Your exercise of the Licensed Rights is expressly made subject to the following 
     In addition to the conditions in Section 3(a), if You Share
     Adapted Material You produce, the following conditions also apply.
 
-    1.  The Adapter's License You apply must be a Creative Commons
+    1.  The Adapter’s License You apply must be a Creative Commons
         license with the same License Elements, this version or later,
         or a BY-SA Compatible License.
 
     2.  You must include the text of, or the URI or hyperlink to, the
-        Adapter's License You apply. You may satisfy this condition in
+        Adapter’s License You apply. You may satisfy this condition in
         any reasonable manner based on the medium, means, and context
         in which You Share Adapted Material.
 
     3.  You may not offer or impose any additional or different terms
         or conditions on, or apply any Effective Technological
         Measures to, Adapted Material that restrict exercise of the
-        rights granted under the Adapter's License You apply.
+        rights granted under the Adapter’s License You apply.
 
 ### Section 4 - Sui Generis Database Rights.
 
@@ -372,8 +372,8 @@ Rights include other Copyright and Similar Rights.
     indicating that material is shared under a Creative Commons public license or
     as otherwise permitted by the Creative Commons policies published at
     [creativecommons.org/policies](https://creativecommons.org/policies),
-    Creative Commons does not authorize the use of the trademark "Creative
-    Commons" or any other trademark or logo of Creative Commons without
+    Creative Commons does not authorize the use of the trademark “Creative
+    Commons” or any other trademark or logo of Creative Commons without
     its prior written consent including, without limitation, in connection
     with any unauthorized modifications to any of its public licenses or
     any other arrangements, understandings, or agreements concerning use
