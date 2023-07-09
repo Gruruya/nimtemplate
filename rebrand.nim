@@ -17,7 +17,7 @@ for file in ["rebrand.nim", "README.md", "nimtemplate.nimble", "tests/test.nim",
 if input.len == 3:
   let author = input[1]
   let email = input[2]
-  for file in ["README.md", "nimtemplate.nimble", "rebrand.nim", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".gitignore" ".github/dependabot.yml", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/nim-run/action.yml"]:
+  for file in ["README.md", "nimtemplate.nimble", "rebrand.nim", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".gitignore", ".github/dependabot.yml", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/nim-run/action.yml"]:
     file.writeFile file.readFile.multiReplace(("gruruya.chi4c@slmails.com", email), ("Gruruya", author))
 
 moveFile("nimtemplate.nimble", project & ".nimble")
