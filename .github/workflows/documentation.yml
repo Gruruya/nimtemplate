@@ -2,7 +2,6 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 
 name: documentation
-description: 'Build and deploy documentation to GitHub pages.'
 
 on:
   push:
