@@ -203,10 +203,12 @@ terms of section 4, provided that you also meet all of these conditions:
 
 * **a)** The work must carry prominent notices stating that you modified
          it, and giving a relevant date.
+
 * **b)** The work must carry prominent notices stating that it is
          released under this License and any conditions added under section 7.
          This requirement modifies the requirement in section 4 to
          “keep intact all notices”.
+
 * **c)** You must license the entire work, as a whole, under this
          License to anyone who comes into possession of a copy.  This
          License will therefore apply, along with any applicable section 7
@@ -214,6 +216,7 @@ terms of section 4, provided that you also meet all of these conditions:
          regardless of how they are packaged.  This License gives no
          permission to license the work in any other way, but it does not
          invalidate such permission if you have separately received it.
+
 * **d)** If the work has interactive user interfaces, each must display
          Appropriate Legal Notices; however, if the Program has interactive
          interfaces that do not display Appropriate Legal Notices, your
@@ -240,6 +243,7 @@ in one of these ways:
          (including a physical distribution medium), accompanied by the
          Corresponding Source fixed on a durable physical medium
          customarily used for software interchange.
+
 * **b)** Convey the object code in, or embodied in, a physical product
          (including a physical distribution medium), accompanied by a
          written offer, valid for at least three years and valid for as
@@ -251,11 +255,13 @@ in one of these ways:
          more than your reasonable cost of physically performing this
          conveying of source, or **(2)** access to copy the
          Corresponding Source from a network server at no charge.
+
 * **c)** Convey individual copies of the object code with a copy of the
          written offer to provide the Corresponding Source.  This
          alternative is allowed only occasionally and noncommercially, and
          only if you received the object code with such an offer, in accord
          with subsection 6b.
+
 * **d)** Convey the object code by offering access from a designated
          place (gratis or for a charge), and offer equivalent access to the
          Corresponding Source in the same way through the same place at no
@@ -268,6 +274,7 @@ in one of these ways:
          Corresponding Source.  Regardless of what server hosts the
          Corresponding Source, you remain obligated to ensure that it is
          available for as long as needed to satisfy these requirements.
+
 * **e)** Convey the object code using peer-to-peer transmission, provided
          you inform other peers where the object code and Corresponding
          Source of the work are being offered to the general public at no
