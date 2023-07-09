@@ -6,9 +6,9 @@ name: build
 
 on:
   push:
-    paths: ['**', '!*.md', '!.gitignore', '!.github/**', '.github/workflows/build.yml', '.github/workflows/nim-run/action.yml']
+    paths: ['**', '!**.md', '!.gitignore', '!.github/**', '.github/workflows/build.yml', '.github/workflows/nim-run/action.yml']
   pull_request:
-    paths: ['**', '!*.md', '!.gitignore', '!.github/**', '.github/workflows/build.yml', '.github/workflows/nim-run/action.yml']
+    paths: ['**', '!**.md', '!.gitignore', '!.github/**', '.github/workflows/build.yml', '.github/workflows/nim-run/action.yml']
 
 jobs:
   build:
