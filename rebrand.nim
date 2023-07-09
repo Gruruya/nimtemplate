@@ -18,8 +18,8 @@ else:
   for file in ["rebrand.nim", "README.md", "nimtemplate.nimble", "src/nimtemplate.nim", "src/nimtemplate/common.nim", "tests/test.nim", ".github/dependabot.yml", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/reuse.yml", ".github/workflows/nim-run/action.yml"]:
     file.writeFile file.readFile.replace("nimtemplate", input[0])
 
-moveFile("nimtemplate.nimble", project & ".nimble")
-moveFile("src/nimtemplate.nim", "src/" & project & ".nim")
-moveDir("src/nimtemplate", "src/" & project)
+moveFile("nimtemplate.nimble", input[0] & ".nimble")
+moveFile("src/nimtemplate.nim", "src/" & input[0] & ".nim")
+moveDir("src/nimtemplate", "src/" & input[0])
 
 echo "Done"
