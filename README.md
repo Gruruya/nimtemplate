@@ -26,5 +26,5 @@ You're gonna want to change the names in the project. I made a small utility for
 nim r rebrand.nim PROJECT_NAME AUTHOR EMAIL
 ```
 
-#### Note on the License
-You can change the license freely in your project generated with this template.
+#### Note on the Licenses
+You can change the licenses freely in your project generated with this template.
