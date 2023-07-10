@@ -1,7 +1,7 @@
-<!--
+[
 Copyright © 2023 Gruruya <gruruya.chi4c@slmails.com>
 SPDX-License-Identifier: CC-BY-SA-4.0
--->
+]:#
 
 # nimtemplate:scroll:
 
@@ -13,7 +13,7 @@ A template to jump start your Nim library or project.
   * Builds and deploys [API reference on GitHub Pages](https://Gruruya.github.io/nimtemplate/nimtemplate.html)
   * License header [REUSE](https://reuse.software/faq/) linting
 
-_Click [here](../../generate) to begin_  
+_Click [here](../../generate) to begin_
 
 ---
 [![GitHub CI](../../actions/workflows/build.yml/badge.svg?branch=master)](../../actions/workflows/build.yml)
