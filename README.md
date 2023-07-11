@@ -1,6 +1,6 @@
 [
-Copyright © 2023 Gruruya <gruruya.chi4c@slmails.com>
-SPDX-License-Identifier: CC-BY-SA-4.0
+: Copyright © 2023 Gruruya <gruruya.chi4c@slmails.com>
+: SPDX-License-Identifier: CC-BY-SA-4.0
 ]:#
 
 # nimtemplate:scroll:
@@ -27,5 +27,5 @@ You're gonna want to change the names in the project. I made a small utility for
 nim r rebrand.nim PROJECT_NAME AUTHOR EMAIL
 ```
 
-#### Note on the Licenses
+#### Note on the licenses
 You can change the licenses freely in your project generated with this template.
