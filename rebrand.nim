@@ -8,7 +8,7 @@ import std/[os, strutils]
 
 let input = commandLineParams()
 if input.len notin {1, 3}:
-  echo "Usage: rebrand PROJECT_NAME [<AUTHOR> <EMAIL>]"
+  echo "Usage: rebrand <project_name> [<author> <email>]"
   quit 1
 
 if input.len == 3:
