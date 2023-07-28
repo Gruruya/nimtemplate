@@ -6,7 +6,7 @@ author      = "Gruruya"
 description = "A template to jump start your Nim library or project."
 license     = "AGPL-3.0-only"
 
-srcDir = "src"
+srcDir = "."
 skipDirs = @["tests"]
 #bin = @["nimtemplate"]
 # uncomment if this program includes a binary
