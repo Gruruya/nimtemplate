@@ -18,7 +18,7 @@ _Click [here](../../generate) to begin_
 ---
 [![GitHub CI](../../actions/workflows/build.yml/badge.svg?branch=master)](../../actions/workflows/build.yml)
 [![Minimum supported Nim version](https://img.shields.io/badge/Nim-1.6.12+-informational?logo=Nim&labelColor=232733&color=F3D400)](https://nim-lang.org)
-[![License](https://img.shields.io/badge/license-AGPL--3.0-663366?logo=gnu&logoColor=000000&labelColor=FFFFFF)](LICENSES/AGPL-3.0-only.md)
+[![License](doc/License-AGPL-3.svg)](LICENSES/AGPL-3.0-only.md)
 
 Usage
 ---
