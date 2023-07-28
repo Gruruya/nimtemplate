@@ -17,8 +17,8 @@ _Click [here](../../generate) to begin_
 
 ---
 [![GitHub CI](../../actions/workflows/build.yml/badge.svg?branch=master)](../../actions/workflows/build.yml)
-[![Minimum supported Nim version](doc/Nim-version.svg)](https://nim-lang.org)
-[![License](doc/AGPL-3.0.svg)](LICENSES/AGPL-3.0-only.md)
+[![Minimum supported Nim version](art/badge-Nim-version.svg)](https://nim-lang.org)
+[![License](art/badge-AGPL-3.0.svg)](LICENSES/AGPL-3.0-only.md)
 
 Usage
 ---
