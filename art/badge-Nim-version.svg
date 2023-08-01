@@ -6,7 +6,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 <svg
 		xmlns="http://www.w3.org/2000/svg"
 		xmlns:xlink="http://www.w3.org/1999/xlink" width="103" height="20" role="img" aria-label="Nim: 1.6.12+">
-	<title>Nim: 1.6.12+</title>
+	<title>Nim: 1.6.14+</title>
 	<linearGradient id="s" x2="0" y2="100%">
 		<stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
 		<stop offset="1" stop-opacity=".1"/>
