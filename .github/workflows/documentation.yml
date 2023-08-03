@@ -6,7 +6,7 @@ name: documentation
 
 on:
   push:
-    paths: ['**.nim', 'nimtemplate.nimble', '.github/workflows/documentation.yml', '.github/workflows/nim-run/action.yml']
+    paths: ['nimtemplate.nim', 'nimtemplate.nimble', 'nimtemplate/**.nim', '.github/workflows/documentation.yml', '.github/workflows/nim-run/action.yml']
     branches: master
 
 permissions:
