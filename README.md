@@ -7,17 +7,17 @@
 
 A template to jump start your Nim library or project.
 
-* Tests using [balls](https://github.com/disruptek/balls)
-* GitHub Actions [workflows](../../actions)
+* Tests using [balls](https://github.com/disruptek/balls/)
+* GitHub Actions [workflows](https://github.com/Gruruya/nimtemplate/actions/)
   * Runs tests on multiple OSes and ISAs
   * Builds and deploys [API reference on GitHub Pages](https://Gruruya.github.io/nimtemplate/nimtemplate.html)
   * License header [REUSE](https://reuse.software/faq/) linting
 
-_Click [here](../../generate) to begin_
+_Click [here](https://github.com/Gruruya/nimtemplate/generate) to begin_
 
 ---
-[![GitHub CI](../../actions/workflows/build.yml/badge.svg?branch=master)](../../actions/workflows/build.yml)
-[![Minimum supported Nim version](art/badge-Nim-version.svg)](https://nim-lang.org)
+[![GitHub CI](https://github.com/Gruruya/nimtemplate/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/Gruruya/nimtemplate/actions/workflows/build.yml?query=branch%3Amaster)
+[![Minimum supported Nim version](art/badge-Nim-version.svg)](https://nim-lang.org/)
 [![License](art/badge-AGPL-3.0.svg)](LICENSES/AGPL-3.0-only.md)
 
 Usage
