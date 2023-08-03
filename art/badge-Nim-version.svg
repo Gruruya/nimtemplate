@@ -5,7 +5,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 <svg
 		xmlns="http://www.w3.org/2000/svg"
-		xmlns:xlink="http://www.w3.org/1999/xlink" width="103" height="20" role="img" aria-label="Nim: 1.6.12+">
+		xmlns:xlink="http://www.w3.org/1999/xlink" width="103" height="20" role="img" aria-label="Nim: 1.6.14+">
 	<title>Nim: 1.6.14+</title>
 	<linearGradient id="s" x2="0" y2="100%">
 		<stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
@@ -23,7 +23,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 		<image x="5" y="3" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZFOTUzIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TmltPC90aXRsZT48cGF0aCBkPSJNMTIuMDk1IDMuMnMtLjkyLjc3OC0xLjg1NyAxLjU1Yy0uOTY0LS4wMzItMi44NTYuMTk5LTMuODguNTk4QzUuNDEyIDQuNzA4IDQuNTgyIDQgNC41ODIgNHMtLjcwOSAxLjMwNS0xLjE1NCAyLjA3Yy0uNjYyLjM3Ny0xLjMyNS44LTEuOTE3IDEuMzZDLjgyNCA3LjE0LjAyNiA2Ljc4MiAwIDYuNzdjLjkxMSAxLjk2NyAxLjUyNCAzLjkzNiAzLjE5IDUuMTIgMi42NTQtNC40ODMgMTQuOTgzLTQuMDcgMTcuNjkxLS4wMjUgMS43NS0uOTc3IDIuNDMtMy4wNzggMy4xMTktNS4wMTgtLjA3NS4wMjYtMS4wMTIuMzYyLTEuNjE5LjYxLS4zNjMtLjQyMy0xLjIxNy0xLjA3Mi0xLjcwMi0xLjM4NWE5Ni4wMDggOTYuMDA4IDAgMDAtMS4xMzEtMi4xMjJzLS43OTQuNjMyLTEuNzE1IDEuMzIyYy0xLjI0My0uMjQ2LTIuNzQ3LS41NDQtNC4wMTItLjQ3QTUyLjk4OCA1Mi45ODggMCAwMTEyLjA5NSAzLjJ6TS45NDIgMTAuOTVsMi4xODkgNS42N2MzLjgwMSA1LjM2NyAxMy41MDggNS43NCAxNy43NC4xMDUgMS4wMDEtMi40MTUgMi4zNTItNS44MDggMi4zNTItNS44MDgtMS4wODYgMS43Mi0yLjg1MiAyLjkwOS0zLjk0IDMuNTQ5LS43NzQuNDUzLTIuNTU4LjcyNy0yLjU1OC43MjdsLTQuNjg0LTIuNTk3LTQuNzEgMi41NDVzLTEuNzYxLS4zMDMtMi41NTgtLjcwMWMtMS42MDgtLjkyLTIuNjktMi4wMDQtMy44My0zLjQ5eiIvPjwvc3ZnPg=="/>
 		<text aria-hidden="true" x="335" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="210">Nim</text>
 		<text x="335" y="140" transform="scale(.1)" fill="#fff" textLength="210">Nim</text>
-		<text aria-hidden="true" x="745" y="150" fill="#ccc" fill-opacity=".3" transform="scale(.1)" textLength="450">1.6.12+</text>
-		<text x="745" y="140" transform="scale(.1)" fill="#333" textLength="450">1.6.12+</text>
+		<text aria-hidden="true" x="745" y="150" fill="#ccc" fill-opacity=".3" transform="scale(.1)" textLength="450">1.6.14+</text>
+		<text x="745" y="140" transform="scale(.1)" fill="#333" textLength="450">1.6.14+</text>
 	</g>
 </svg>
