@@ -17,8 +17,8 @@ _Click [here](https://github.com/Gruruya/nimtemplate/generate) to begin_
 
 ---
 [![GitHub CI](https://github.com/Gruruya/nimtemplate/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/Gruruya/nimtemplate/actions/workflows/build.yml?query=branch%3Amaster)
-[![Minimum supported Nim version](art/badge-Nim-version.svg)](https://nim-lang.org/)
-[![License](art/badge-AGPL-3.0.svg)](LICENSES/AGPL-3.0-only.md)
+[![Minimum supported Nim version](doc/badge-Nim-version.svg)](https://nim-lang.org/)
+[![License](doc/badge-AGPL-3.0.svg)](LICENSES/AGPL-3.0-only.md)
 
 Usage
 ---

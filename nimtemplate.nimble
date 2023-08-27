@@ -1,3 +1,4 @@
+## Metadata for nimble to build, package, and place nimtemplate.
 # Copyright © 2023 Gruruya <gruruya.chi4c@slmails.com>
 # SPDX-License-Identifier: AGPL-3.0-only
 
@@ -7,10 +8,10 @@ description = "A template to jump start your Nim library or project."
 license     = "AGPL-3.0-only"
 
 srcDir = "."
-skipDirs = @["tests"]
 #bin = @["nimtemplate"]
 # uncomment if this program includes a binary
 # also add nimble build -y to the run field of the build and test job in .github/workflows/build.yml
+skipDirs = @["tests"]
 
 # Dependencies
 #requires "nim >= 2.0.0"
