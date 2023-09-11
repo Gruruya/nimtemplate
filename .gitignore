@@ -9,10 +9,11 @@
 
 # Normal ignores:
 *.exe
-nimcache
 *.pdb
 *.ilk
 *.out
 .*
 !.gitignore
-!.github
+!.github/
+nimcache/
+htmldocs/
