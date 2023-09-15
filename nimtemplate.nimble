@@ -32,4 +32,5 @@ task test, "run tests":
     else: "balls"
   let (output, exitCode) = gorgeEx balls & " --backend:c --mm:arc --mm:refc --define:danger"
   echo output
-  quit exitCode
+  if exitCode != 0:
+    quit exitCode
