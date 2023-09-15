@@ -58,6 +58,7 @@ runs:
       if: ${{ inputs.arch == 'x86_64' || inputs.arch == 'x86' }}
       shell: bash
       run: |
+        nim --version
         ${{ inputs.run }}
 
     - name: Setup Nim for ${{ inputs.arch }} and Run
@@ -77,4 +78,5 @@ runs:
 
         run: |
           export PATH="$PATH:${NIMBLE_DIR:-$HOME/.nimble}/bin"
+          nim --version
           ${{ inputs.run }}
