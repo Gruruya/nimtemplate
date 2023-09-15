@@ -30,4 +30,6 @@ task test, "run tests":
     when defined(windows):
           "balls.cmd"
     else: "balls"
-  exec balls & " --backend:c --mm:arc --mm:refc --define:danger"
+  let (output, exitCode) = gorgeEx balls & " --backend:c --mm:arc --mm:refc --define:danger"
+  echo output
+  quit exitCode

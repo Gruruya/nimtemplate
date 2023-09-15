@@ -57,7 +57,8 @@ runs:
     - name: Run
       if: ${{ inputs.arch == 'x86_64' || inputs.arch == 'x86' }}
       shell: bash
-      run: ${{ inputs.run }}
+      run: |
+        ${{ inputs.run }}
 
     - name: Setup Nim for ${{ inputs.arch }} and Run
       if: ${{ inputs.arch != 'x86_64' && inputs.arch != 'x86' }}
