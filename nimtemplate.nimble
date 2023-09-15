@@ -26,8 +26,9 @@ else:
   before test: exec "nimble install -y"
 
 task test, "run tests":
+  let balls = when defined(windows): "balls.cmd" else: "balls"
   let (output, exitCode) =
-    gorgeEx "balls".toExe & " --backend:c --mm:orc --mm:arc --define:debug --define:release --define:danger"
+    gorgeEx balls & " --backend:c --mm:orc --mm:arc --define:debug --define:release --define:danger"
   echo output
   if exitCode != 0:
     quit exitCode
