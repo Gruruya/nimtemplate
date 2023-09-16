@@ -5,15 +5,17 @@
 *
 !*/
 !*.*
-!COPYING
 
-# Normal ignores:
+# Ignore dotfiles:
+.*
+!/.gitignore
+!/.github/
+
+# Ignore artifacts:
 *.exe
 *.pdb
 *.ilk
 *.out
-.*
-!.gitignore
-!.github/
 nimcache/
-htmldocs/
+htmldocs/   # nim/nimble doc
+nimbledeps/ # nimble --local
