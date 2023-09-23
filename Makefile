@@ -3,28 +3,28 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 
 NIMBLE       := nimble
-NIMBLE_FLAGS :=
+NIMBLE_FLAGS := -y
 
 .PHONY: all build run doc clean install uninstall test
 all: build
 
 build:
-	@$(NIMBLE) -y $(NIMBLE_FLAGS) build
+	@$(NIMBLE) $(NIMBLE_FLAGS) build
 
 run:
-	@$(NIMBLE) -y $(NIMBLE_FLAGS) run
+	@$(NIMBLE) $(NIMBLE_FLAGS) run
 
 doc:
-	@$(NIMBLE) -y $(NIMBLE_FLAGS) docs
+	@$(NIMBLE) $(NIMBLE_FLAGS) docs
 
 clean:
-	@$(NIMBLE) -y $(NIMBLE_FLAGS) clean
+	@$(NIMBLE) $(NIMBLE_FLAGS) clean
 
 install:
-	@$(NIMBLE) -y $(NIMBLE_FLAGS) install
+	@$(NIMBLE) $(NIMBLE_FLAGS) install
 
 uninstall:
-	@$(NIMBLE) -y $(NIMBLE_FLAGS) uninstall nimtemplate
+	@$(NIMBLE) $(NIMBLE_FLAGS) uninstall nimtemplate
 
 test:
-	@$(NIMBLE) -y $(NIMBLE_FLAGS) test
+	@$(NIMBLE) $(NIMBLE_FLAGS) test
