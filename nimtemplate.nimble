@@ -7,7 +7,7 @@ author       = "Gruruya"
 description  = "A template to jump start your Nim library or project."
 license      = "AGPL-3.0-only"
 srcDir       = "."
-bin          = @["nimtemplate"] # If you remove this, also remove `make` from the "run |" block near the end of ".github/workflows/build.yml"
+bin          = @["nimtemplate"] # If you remove this, also remove "nimble build -y" from the `testCI` task
 installFiles = @["nimtemplate.nim"]
 installDirs  = @["nimtemplate", "LICENSES"]
 
@@ -18,13 +18,16 @@ installDirs  = @["nimtemplate", "LICENSES"]
 when declared(taskRequires):
   when (NimMajor, NimMinor) >= (1, 7) and not defined(windows) and not defined(macosx):
     taskRequires "test", "https://github.com/disruptek/balls >= 4.0.0"
+    taskRequires "testEx", "https://github.com/disruptek/balls >= 4.0.0"
     taskRequires "testCI", "https://github.com/disruptek/balls >= 4.0.0"
   else:
     taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
+    taskRequires "testEx", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
     taskRequires "testCI", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
   before test: exec "nimble install -y"
+  before testEx: exec "nimble install -y"
   before testCI: exec "nimble install -y"
 
 template testCmd: string =
@@ -34,9 +37,15 @@ template testCmd: string =
 task test, "run tests":
   exec testCmd
 
-task testCI, "run tests, retains exit code":
+task testEx, "run tests, retains exit code":
   let (output, exitCode) =
     gorgeEx testCmd
   echo output
   if exitCode != 0:
     quit exitCode
+
+task testCI, "run tests for CI":
+  template nimble: string =
+    when declared(nimbleExe): nimbleExe else: "nimble"
+  exec nimble & " build -y"
+  testExTask()
