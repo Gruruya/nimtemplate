@@ -30,7 +30,7 @@ jobs:
     - name: Install Nim, then generate docs
       uses: './.github/workflows/nim-run'
       with:
-        run: make doc
+        run: nimble docs
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - run: ln -s nimtemplate.html htmldocs/index.html

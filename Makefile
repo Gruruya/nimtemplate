@@ -15,10 +15,10 @@ run:
 	@$(NIMBLE) -y $(NIMBLE_FLAGS) run
 
 doc:
-	@$(NIMBLE) -y $(NIMBLE_FLAGS) doc --project nimtemplate.nim --outDir:htmldocs
+	@$(NIMBLE) -y $(NIMBLE_FLAGS) docs
 
 clean:
-	@rm -rf htmldocs nimtemplate.out nimbledeps
+	@$(NIMBLE) -y $(NIMBLE_FLAGS) clean
 
 install:
 	@$(NIMBLE) -y $(NIMBLE_FLAGS) install

@@ -15,6 +15,18 @@ installDirs  = @["nimtemplate", "LICENSES"]
 #requires "nim >= 2.0.0"
 # Uncomment if you require features from a specific Nim version
 
+template nimble: string =
+  when declared(nimbleExe): nimbleExe else: "nimble"
+
+task docs, "build docs":
+  exec nimble & " doc --project nimtemplate.nim"
+
+after clean:
+  for dir in ["htmldocs", "nimbledeps"]:
+    rmDir(dir)
+  for file in ["nimtemplate.out"]:
+    rmFile(file)
+
 when declared(taskRequires):
   proc taskRequires(tasks: openArray[string]; dependency: string) =
     for task in tasks: taskRequires(task, dependency)
@@ -32,10 +44,6 @@ task test, "run tests":
   let balls = when defined(windows): "balls.cmd" else: "balls"
   exec balls & " --backend:c --mm:orc --mm:arc --define:debug --define:release --define:danger"
 
-task testCI, "run tests for CI":
-  # build executable
-  template nimble: string =
-    when declared(nimbleExe): nimbleExe else: "nimble"
+task testCI, "run tests and build, for CI":
   exec nimble & " build -y"
-  # run tests
   testTask()
