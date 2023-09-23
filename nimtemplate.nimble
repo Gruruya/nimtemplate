@@ -16,14 +16,13 @@ installDirs  = @["nimtemplate", "LICENSES"]
 # Uncomment if you require features from a specific Nim version
 
 when declared(taskRequires):
-  when (NimMajor, NimMinor) >= (1, 7) and not defined(windows) and not defined(macosx):
-    taskRequires "test", "https://github.com/disruptek/balls >= 4.0.0"
-    taskRequires "testEx", "https://github.com/disruptek/balls >= 4.0.0"
-    taskRequires "testCI", "https://github.com/disruptek/balls >= 4.0.0"
-  else:
-    taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
-    taskRequires "testEx", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
-    taskRequires "testCI", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
+  proc taskRequires(tasks: openArray[string]; dependency: string) =
+    for task in tasks: taskRequires(task, dependency)
+  taskRequires ["test", "testEx", "testCI"],
+    when (NimMajor, NimMinor) >= (1, 7) and not defined(windows) and not defined(macosx):
+      "https://github.com/disruptek/balls >= 4.0.0"
+    else:
+      "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
   before test: exec "nimble install -y"
