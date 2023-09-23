@@ -5,6 +5,7 @@
 *
 !*/
 !*.*
+!/Makefile
 
 # Ignore dotfiles:
 .*
@@ -16,6 +17,9 @@
 *.pdb
 *.ilk
 *.out
+# nim --nimcache
 nimcache/
-htmldocs/   # nim/nimble doc
-nimbledeps/ # nimble --local
+# nim/nimble doc
+htmldocs/
+# nimble --local
+nimbledeps/

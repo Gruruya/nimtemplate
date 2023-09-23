@@ -37,6 +37,7 @@ jobs:
       uses: './.github/workflows/nim-run'
       with:
         run: |
+          make
           nimble testCI -y
         version: ${{ matrix.nim-version }}
         arch: ${{ matrix.arch }}

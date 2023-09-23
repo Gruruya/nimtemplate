@@ -2,13 +2,14 @@
 # Copyright © 2023 Gruruya <gruruya.chi4c@slmails.com>
 # SPDX-License-Identifier: AGPL-3.0-only
 
-version     = "0.0.0"
-author      = "Gruruya"
-description = "A template to jump start your Nim library or project."
-license     = "AGPL-3.0-only"
-srcDir      = "."
-bin         = @["nimtemplate"] # If you remove this, also remove the "nimble build -y" line at the end of ".github/workflows/build.yml"
-skipDirs    = @["tests"]
+version      = "0.0.0"
+author       = "Gruruya"
+description  = "A template to jump start your Nim library or project."
+license      = "AGPL-3.0-only"
+srcDir       = "."
+bin          = @["nimtemplate"] # If you remove this, also remove the "nimble build -y" line at the end of ".github/workflows/build.yml"
+installFiles = @["nimtemplate.nim"]
+installDirs  = @["nimtemplate", "LICENSES"]
 
 # Dependencies
 #requires "nim >= 2.0.0"
