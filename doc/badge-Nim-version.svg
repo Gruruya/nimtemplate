@@ -24,6 +24,6 @@ SPDX-License-Identifier: AGPL-3.0-only
 		<text aria-hidden="true" x="335" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="210">Nim</text>
 		<text x="335" y="140" transform="scale(.1)" fill="#fff" textLength="210">Nim</text>
 		<text aria-hidden="true" x="745" y="150" fill="#ccc" fill-opacity=".3" transform="scale(.1)" textLength="450">1.6.14+</text>
-		<text x="745" y="140" transform="scale(.1)" fill="#161820" textLength="450">1.6.14+</text>
+		<text x="745" y="140" transform="scale(.1)" fill="#100010" textLength="450">1.6.14+</text>
 	</g>
 </svg>
