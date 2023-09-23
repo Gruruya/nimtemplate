@@ -368,10 +368,10 @@ Rights include other Copyright and Similar Rights.
     Notwithstanding, Creative Commons may elect to apply one of its
     public licenses to material it publishes and in those instances
     will be considered the "Licensor." The text of the Creative Commons
-    public licenses is dedicated to the public domain under the [CC0 Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/legalcode). Except for the limited purpose of
-    indicating that material is shared under a Creative Commons public license or
-    as otherwise permitted by the Creative Commons policies published at
-    [creativecommons.org/policies](https://creativecommons.org/policies),
+    public licenses is dedicated to the public domain under the [CC0 Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
+    Except for the limited purpose of indicating that material is shared
+    under a Creative Commons public license or as otherwise permitted by
+    the Creative Commons policies published at [creativecommons.org/policies](https://creativecommons.org/policies),
     Creative Commons does not authorize the use of the trademark "Creative
     Commons" or any other trademark or logo of Creative Commons without
     its prior written consent including, without limitation, in connection
