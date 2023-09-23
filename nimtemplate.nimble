@@ -7,7 +7,7 @@ author       = "Gruruya"
 description  = "A template to jump start your Nim library or project."
 license      = "AGPL-3.0-only"
 srcDir       = "."
-bin          = @["nimtemplate"] # If you remove this, also remove the "nimble build -y" line at the end of ".github/workflows/build.yml"
+bin          = @["nimtemplate"] # If you remove this, also remove `make` from the "run |" block near the end of ".github/workflows/build.yml"
 installFiles = @["nimtemplate.nim"]
 installDirs  = @["nimtemplate", "LICENSES"]
 

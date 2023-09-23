@@ -4,3 +4,8 @@
 
 ### Note
 ## This file should probably be a public interface to your library.
+
+import nimtemplate/common
+
+when isMainModule and appType notin ["lib", "staticlib"]:
+  echo Placeholder
