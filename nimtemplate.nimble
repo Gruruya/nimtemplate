@@ -18,7 +18,7 @@ installDirs  = @["nimtemplate", "LICENSES"]
 when declared(taskRequires):
   proc taskRequires(tasks: openArray[string]; dependency: string) =
     for task in tasks: taskRequires(task, dependency)
-  taskRequires ["test", "testEx", "testCI"],
+  taskRequires ["test", "testCI"],
     when (NimMajor, NimMinor) >= (1, 7) and not defined(windows) and not defined(macosx):
       "https://github.com/disruptek/balls >= 4.0.0"
     else:
@@ -26,25 +26,16 @@ when declared(taskRequires):
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
   before test: exec "nimble install -y"
-  before testEx: exec "nimble install -y"
   before testCI: exec "nimble install -y"
 
-template testCmd: string =
-  let balls = when defined(windows): "balls.cmd" else: "balls"
-  balls & " --backend:c --mm:orc --mm:arc --define:debug --define:release --define:danger"
-
 task test, "run tests":
-  exec testCmd
-
-task testEx, "run tests, retains exit code":
-  let (output, exitCode) =
-    gorgeEx testCmd
-  echo output
-  if exitCode != 0:
-    quit exitCode
+  let balls = when defined(windows): "balls.cmd" else: "balls"
+  exec balls & " --backend:c --mm:orc --mm:arc --define:debug --define:release --define:danger"
 
 task testCI, "run tests for CI":
+  # build executable
   template nimble: string =
     when declared(nimbleExe): nimbleExe else: "nimble"
   exec nimble & " build -y"
-  testExTask()
+  # run tests
+  testTask()
