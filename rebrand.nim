@@ -13,7 +13,7 @@ if input.len notin {1, 3}:
   quit 1
 
 if input.len == 3:
-  for file in ["rebrand.nim", "README.md", "nimtemplate.nimble", "Makefile", "nimtemplate.nim", "nimtemplate/common.nim", "tests/test.nim", ".github/dependabot.yml", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/reuse.yml", ".github/workflows/nim-run/action.yml", ".gitignore"]:
+  for file in ["rebrand.nim", "README.md", "nimtemplate.nimble", "Makefile", "nimtemplate.nim", "nimtemplate/common.nim", "tests/test.nim", ".github/dependabot.yml", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/reuse.yml", ".github/workflows/nim-run/action.yml", ".gitignore", "CHANGELOG.md"]:
     file.writeFile file.readFile.multiReplace(("nimtemplate", input[0]), ("gruruya.chi4c@slmails.com", input[2]), ("Gruruya", input[1]))
 else:
   for file in ["rebrand.nim", "README.md", "nimtemplate.nimble", "Makefile", "nimtemplate.nim", "nimtemplate/common.nim", "tests/test.nim", ".github/dependabot.yml", ".github/workflows/build.yml", ".github/workflows/documentation.yml", ".github/workflows/reuse.yml", ".github/workflows/nim-run/action.yml"]:
