@@ -5,6 +5,8 @@
 
 name: linting reuse
 on: [push, pull_request]
+## See also:
+## * https://github.com/marketplace/actions/reuse-compliance-check
 
 jobs:
   REUSE-Compliance-Check:
