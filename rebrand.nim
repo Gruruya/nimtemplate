@@ -1,14 +1,12 @@
-## Rebranding script - for nimtemplate.
 # Copyright © 2023 Gruruya <gruruya.chi4c@slmails.com>
 # SPDX-License-Identifier: AGPL-3.0-only
 
-### Description
-## Script to rebrand this template repository.
+## Script to change the names in this template repository.
 
-import std/[os, strutils]
+import std/[os, strutils, sequtils]
 
 let input = commandLineParams()
-if input.len notin {1, 3}:
+if input.len notin {1, 3} or anyIt(input, it[0] == '-'):
   echo "Usage: rebrand <project_name> [<author> <email>]"
   quit 1
 

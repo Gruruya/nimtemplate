@@ -1,4 +1,3 @@
-## Metadata for nimble to build, package, and place nimtemplate.
 # Copyright © 2023 Gruruya <gruruya.chi4c@slmails.com>
 # SPDX-License-Identifier: AGPL-3.0-only
 
