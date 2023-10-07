@@ -39,7 +39,7 @@ jobs:
       uses: './.github/workflows/nim-run'
       with:
         run: |
-          nimble testCI -y
+          nimble runCI -y
         version: ${{ matrix.nim-version }}
         arch: ${{ matrix.arch }}
         token: ${{ secrets.GITHUB_TOKEN }}
