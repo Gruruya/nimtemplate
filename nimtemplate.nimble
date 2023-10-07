@@ -6,7 +6,8 @@ author       = "Gruruya"
 description  = "A template to jump start your Nim library or project."
 license      = "AGPL-3.0-only"
 srcDir       = "."
-bin          = @["nimtemplate"] # If you remove this, also remove "nimble build -y" from the `runCI` task
+bin          = @["nimtemplate"]
+# If you edit this, you may also want to edit .github/workflows/build.yml
 installFiles = @["nimtemplate.nim"]
 installDirs  = @["nimtemplate", "LICENSES"]
 
@@ -27,9 +28,7 @@ after clean:
     rmFile(file)
 
 when declared(taskRequires):
-  proc taskRequires(tasks: openArray[string]; dependency: string) =
-    for task in tasks: taskRequires(task, dependency)
-  taskRequires ["test", "runCI"],
+  taskRequires "test",
     when (NimMajor, NimMinor) >= (1, 7) and not defined(windows) and not defined(macosx):
       "https://github.com/disruptek/balls >= 4.0.0"
     else:
@@ -37,12 +36,7 @@ when declared(taskRequires):
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
   before test: exec nimbleExe & " install -y"
-  before runCI: exec nimbleExe & " install -y"
 
 task test, "run tests":
   let balls = when defined(windows): "balls.cmd" else: "balls"
   exec balls & " --backend:c --mm:orc --mm:arc --define:debug --define:release --define:danger"
-
-task runCI, "run tests and build, for CI":
-  exec nimbleExe & " build -y"
-  testTask()
