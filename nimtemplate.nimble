@@ -14,11 +14,11 @@ installDirs  = @["nimtemplate", "LICENSES"]
 #requires "nim >= 2.0.0"
 # Uncomment if you require features from a specific Nim version
 
-template nimble: string =
-  when declared(nimbleExe): nimbleExe else: "nimble"
+when not declared(nimbleExe):
+  const nimbleExe {.strdefine.} = "nimble"
 
 task docs, "build docs":
-  exec nimble & " doc --project nimtemplate.nim"
+  exec nimbleExe & " doc --project nimtemplate.nim"
 
 after clean:
   for dir in ["htmldocs", "nimbledeps"]:
@@ -36,13 +36,13 @@ when declared(taskRequires):
       "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
-  before test: exec nimble & " install -y"
-  before runCI: exec nimble & " install -y"
+  before test: exec nimbleExe & " install -y"
+  before runCI: exec nimbleExe & " install -y"
 
 task test, "run tests":
   let balls = when defined(windows): "balls.cmd" else: "balls"
   exec balls & " --backend:c --mm:orc --mm:arc --define:debug --define:release --define:danger"
 
 task runCI, "run tests and build, for CI":
-  exec nimble & " build -y"
+  exec nimbleExe & " build -y"
   testTask()
