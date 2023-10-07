@@ -41,12 +41,22 @@ jobs:
         run: |
           nimble build -y
           nimble test -y
+          ls -a
+          ls -a ~
         version: ${{ matrix.nim-version }}
         arch: ${{ matrix.arch }}
         token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload Artifact
+      if: ${{ matrix.os == 'windows-latest' }}
+      uses: actions/upload-artifact@v3
+      with:
+        name: nimtemplate-${{ matrix.os }}-${{ matrix.arch }}.exe
+        path: .nimble/bin/nimtemplate
+
+    - name: Upload Artifact
+      if: ${{ matrix.os != 'windows-latest' }}
       uses: actions/upload-artifact@v3
       with:
         name: nimtemplate-${{ matrix.os }}-${{ matrix.arch }}
-        path: /root/.nimble/bin/nimtemplate
+        path: .nimble/bin/nimtemplate
