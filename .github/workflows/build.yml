@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 
 name: build
-description: 'Build and test nimtemplate.'
+## Build and test nimtemplate.
 ## See also:
 ## * ./nim-run/action.yml
 

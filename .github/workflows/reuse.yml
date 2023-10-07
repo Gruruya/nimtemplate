@@ -3,10 +3,11 @@
 # SPDX-License-Identifier: CC0-1.0
 
 name: REUSE linting
-description: 'REUSE compliance linting.'
-on: [push, pull_request]
+## REUSE compliance linting.
 ## See also:
 ## * https://github.com/marketplace/actions/reuse-compliance-check
+
+on: [push, pull_request]
 
 jobs:
   REUSE-Compliance-Check:

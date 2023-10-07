@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 
 name: documentation
-description: 'Build docs and host them on GitHub Pages.'
+## Build docs and host them on GitHub Pages.
 ## See also:
 ## * ./nim-run/action.yml
 ## * https://nim-lang.org/docs/docgen.html
