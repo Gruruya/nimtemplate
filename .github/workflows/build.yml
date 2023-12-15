@@ -47,7 +47,7 @@ jobs:
 
     - name: Upload Artifact
       if: ${{ matrix.os != 'windows-latest' }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: nimtemplate-${{ matrix.os }}-${{ matrix.arch }}-bin
         path: nimtemplate.out
@@ -55,7 +55,7 @@ jobs:
 
     - name: Upload Artifact (Windows)
       if: ${{ matrix.os == 'windows-latest' }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: nimtemplate-${{ matrix.os }}-${{ matrix.arch }}-bin
         path: nimtemplate.exe
