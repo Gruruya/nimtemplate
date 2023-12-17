@@ -7,7 +7,7 @@ name: REUSE linting
 ## See also:
 ## * https://github.com/marketplace/actions/reuse-compliance-check
 
-on: [push, pull_request]
+on: push
 
 jobs:
   REUSE-Compliance-Check:
