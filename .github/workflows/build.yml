@@ -9,8 +9,6 @@ name: build
 on:
   push:
     paths: ['nimtemplate.nim', 'nimtemplate.nimble', 'nimtemplate/**.nim', 'tests/**.nim', '.github/workflows/build.yml', '.github/workflows/nim-run/action.yml']
-  pull_request:
-    paths: ['nimtemplate.nim', 'nimtemplate.nimble', 'nimtemplate/**.nim', 'tests/**.nim', '.github/workflows/build.yml', '.github/workflows/nim-run/action.yml']
 
 jobs:
   build:
@@ -47,16 +45,16 @@ jobs:
 
     - name: Upload Artifact
       if: ${{ matrix.os != 'windows-latest' }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: nimtemplate-${{ matrix.os }}-${{ matrix.arch }}-bin
+        name: nimtemplate-${{ matrix.os }}-${{ matrix.arch }}-nim-${{ matrix.nim-version }}-bin
         path: nimtemplate.out
         if-no-files-found: error
 
     - name: Upload Artifact (Windows)
       if: ${{ matrix.os == 'windows-latest' }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: nimtemplate-${{ matrix.os }}-${{ matrix.arch }}-bin
+        name: nimtemplate-${{ matrix.os }}-${{ matrix.arch }}-nim-${{ matrix.nim-version }}-bin
         path: nimtemplate.exe
         if-no-files-found: error
